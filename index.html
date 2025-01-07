@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Insights</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        .section:nth-child(odd) {
+            background-color: #f3f3f3;
+        }
+
+        .section:nth-child(even) {
+            background-color: #eaeaea;
+        }
+
+        .section.active {
+            background-color: #ffd700; /* Highlight effect for active section */
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        .content h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 600px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Section 1 -->
+    <div class="section" id="section1">
+        <div class="content">
+            <h1>Welcome to My Data Analysis</h1>
+            <p>Explore the insights and visualizations derived from my project.</p>
+        </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section" id="section2">
+        <div class="content">
+            <h1>Step Count Analysis</h1>
+            <p>Here is an example visualization of step counts over time, highlighting key task days.</p>
+            <img src="path/to/your/visualization1.png" alt="Step Count Analysis">
+        </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section" id="section3">
+        <div class="content">
+            <h1>Insights on Task Days</h1>
+            <p>Analyze how tasks impacted daily activities and trends observed.</p>
+            <img src="path/to/your/visualization2.png" alt="Task Impact Visualization">
+        </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section" id="section4">
+        <div class="content">
+            <h1>Conclusions</h1>
+            <p>Conclusions derived from the data and next steps for further exploration.</p>
+        </div>
+    </div>
+
+    <script>
+        // Highlight effect for active sections
+        const sections = document.querySelectorAll(".section");
+
+        window.addEventListener("scroll", () => {
+            let scrollPos = window.scrollY + window.innerHeight / 2;
+
+            sections.forEach(section => {
+                if (
+                    scrollPos > section.offsetTop &&
+                    scrollPos < section.offsetTop + section.offsetHeight
+                ) {
+                    section.classList.add("active");
+                } else {
+                    section.classList.remove("active");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

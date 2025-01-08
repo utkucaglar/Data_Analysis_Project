@@ -189,7 +189,7 @@
     </div>
     
     <!-- Section 1 -->
-    <div class="section" style="background-color: rgba(59, 40, 7, 0.9);">
+    <div id="section1" class="section" style="background-color: rgba(59, 40, 7, 0.9);">
         <div class="content">
             <h1>Quantifying the Impact of University Assignments<br> on Daily Activity Levels</br></h1>
             <br><br><br><br>
@@ -291,7 +291,7 @@
     </div>
     
     <!-- Section 10 -->
-    <div class="section" style="background-color: rgba(60, 6, 33, 0.9);">
+    <div id="section10" class="section" style="background-color: rgba(60, 6, 33, 0.9);">
         <div class="content">
             <h1>Now lets do some tests, but before hypotheses</h1><br>
             <p><u>Null Hypothesis (H₀):</u> There is no significant difference in daily activity levels between task days (including the two days prior) and normal days.</p><br><br>
@@ -369,6 +369,13 @@
         const closeModal = document.getElementById("closeModal");
         const graphs = document.querySelectorAll(".graph, .small-img");
 
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
         graphs.forEach(graph => {
             graph.addEventListener("click", () => {
                 modalImage.src = graph.src;

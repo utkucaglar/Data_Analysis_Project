@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Insights</title>
+    <title>Interactive Data Journey</title>
     <style>
         * {
             margin: 0;
@@ -12,110 +12,334 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             overflow-x: hidden;
         }
 
         .section {
-            height: 100vh;
+            height: 120vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            transition: background-color 0.5s ease-in-out;
-        }
-
-        .section:nth-child(odd) {
-            background-color: #f3f3f3;
-        }
-
-        .section:nth-child(even) {
-            background-color: #eaeaea;
-        }
-
-        .section.active {
-            background-color: #ffd700; /* Highlight effect for active section */
-        }
-
-        .content {
+            color: white;
             text-align: center;
             padding: 20px;
-            max-width: 800px;
+            position: relative;
         }
 
+        /* Add marble texture in the background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('pexels-pixabay-355757.jpg');
+            opacity: 0.6; /* Adjust opacity for a subtle texture effect */
+            z-index: -1;
+        }
+
+
         .content h1 {
+            font-size: 4em; /* Larger titles */
             margin-bottom: 20px;
-            font-size: 2.5em;
-            color: #333;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .content h2 {
+            font-size: 2.5em; /* Larger titles */
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         .content p {
+            font-size: 1.5em;
             margin-bottom: 20px;
-            font-size: 1.2em;
-            color: #555;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
+        .content p1 {
+            font-size: 1.25em;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .content p2 {
+            font-size: 5em;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
         .content img {
             width: 100%;
-            max-width: 600px;
-            border: 2px solid #ddd;
+            max-width: 1000px;
+            border: 3px solid white;
             border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
             margin: 20px 0;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .content img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Override styles for small images */
+        .content .small-img {
+            width: auto;
+            max-width: 250px;
+            max-height: 250px;
+            border: none; /* Explicitly remove borders */
+            border-radius: 0; /* Reset rounded corners */
+            box-shadow: none; /* Remove shadow if undesired */
+            margin: 10px 0;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .content .small-img:hover {
+            transform: scale(1.1);
+        }
+
+
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 5px solid white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <!-- Section 1 -->
-    <div class="section" id="section1">
+    <div class="section" style="background-color: rgba(59, 40, 7, 0.9);">
         <div class="content">
-            <h1>Welcome to My Data Analysis</h1>
-            <p>Explore the insights and visualizations derived from my project.</p>
+            <h1>Quantifying the Impact of University Assignments<br> on Daily Activity Levels</br></h1>
+            <br><br><br><br>
+            <h2>Utku Çağlar 32579</h2>
+            <img src="C:\Users\utkuc\OneDrive\Masaüstü\DSA210 Project\Icon - Apple Health.png" alt="Small Icon" class="small-img">
         </div>
     </div>
 
+
     <!-- Section 2 -->
-    <div class="section" id="section2">
+    <div class="section" style="background-color: rgba(59, 40, 7, 0.9);">
         <div class="content">
-            <h1>Step Count Analysis</h1>
-            <p>Here is an example visualization of step counts over time, highlighting key task days.</p>
-            <img src="path/to/your/visualization1.png" alt="Step Count Analysis">
+            <h1>My Hypothesis</h1><br><br>
+            <h2><b>Daily activity levels significantly decrease as university assignments approach</h2>
+            <p1><u>Since in our university midterm exams are mostly made on the weekends students are forced to study on friday and weekends if they want to get good grades.</u></p1><br><br>
+            <img src="C:\Users\utkuc\OneDrive\Masaüstü\DSA210 Project\What Is Data.jpeg">
         </div>
     </div>
 
     <!-- Section 3 -->
-    <div class="section" id="section3">
+    <div class="section" style="background-color: rgba(58, 4, 3, 0.9);">
         <div class="content">
-            <h1>Insights on Task Days</h1>
-            <p>Analyze how tasks impacted daily activities and trends observed.</p>
-            <img src="path/to/your/visualization2.png" alt="Task Impact Visualization">
+            <h1>I first divided the cleared data into weeks</h1><br>
+            <p>Doing so i clearly saw a pattern in the data</p>
+            <img src="C:\Users\utkuc\OneDrive\Masaüstü\DS 210 Graphs\04510bb8-5a35-4801-95f7-41ed5bca0dd1.png" alt="Step Count Analysis" class="graph"><br>
+            <h>Click on graph for expanded view</h>
+        </div>
+    </div>
+    <!-- Section 4 -->
+    <div class="section" style="background-color: rgba(58, 4, 3, 0.9);">
+        <div class="content">
+            <h1>Then i decided to show the data on line chart with assignment dates labeled</h1><br>
+            <p>While this graph helped me see that my point might be true, I needed to explore the data further with<br>different graphs and visualizations to really understand the data and be confident in my conclusion.</p>
+            <img src="C:\Users\utkuc\OneDrive\Masaüstü\DS 210 Graphs\21959733-f7f7-4a40-9a97-3fbe8c900b90.png" alt="Task Impact Visualization" class="graph">
+            <br>
+            <br>
+            <h>Click on graph for expanded view</h>
         </div>
     </div>
 
-    <!-- Section 4 -->
-    <div class="section" id="section4">
+    <!-- Section 5 -->
+    <div class="section" style="background-color: rgba(58, 4, 3, 0.9);">
         <div class="content">
-            <h1>Conclusions</h1>
-            <p>Conclusions derived from the data and next steps for further exploration.</p>
+            <h1>The Bar Plot was the second graph i had visualized</h1><br>
+            <p>Now it was clearer than ever to notice the decrease in my daily activity before and on the day of an assignment</p>
+            <h> (MATH 204 MT2 and CS303 MT2 were early in the morning, so after the exams, I was free to leave campus.)</h> <br> <br>
+            <img src="C:\Users\utkuc\OneDrive\Masaüstü\DS 210 Graphs\0ecab88c-42b5-4c0c-afa9-776b34b5e640.png" alt="Task Impact Visualization" class="graph">
+            <br>
+            <br>
+            <h>Click on graph for expanded view</h>
         </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section" style="background-color: rgba(7, 17, 59, 0.9);">
+        <div class="content">
+            <h1>To show my claim i created more visualizations</h1><br>
+            <p>I used a box plot to highlight the differences in activity levels between regular days and task days</p>
+            <img src="C:\Users\utkuc\OneDrive\Masaüstü\DS 210 Graphs\78fbae8e-47e0-46eb-bb51-10f65718f18c.png" alt="Task Impact Visualization" class="graph">
+            <br>
+            <br>
+            <h>Click on graph for expanded view</h>
+        </div>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section" style="background-color: rgba(7, 17, 59, 0.9);">
+        <div class="content">
+            <h1>Also made a graph for cumulative steps to back my claim</h1><br>
+            <p>The cumulative steps appeared more stable as an assignment date approached</p>
+            <img src="C:\Users\utkuc\OneDrive\Masaüstü\DS 210 Graphs\92840483-56ac-447f-949e-a4a2307dfacd.png" alt="Task Impact Visualization" class="graph">
+            <br>
+            <br>
+            <h>Click on graph for expanded view</h>
+        </div>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="section" style="background-color: rgba(6, 87, 94, 0.9)">
+        <div class="content">
+            <h1>Then i decided to create visualizations for before and after assignment activitiy</h1><br>
+            <p>This graph showed the difference in steps before and after assignment days, but it could have been better with some changes.</p>
+            <img src="C:\Users\utkuc\OneDrive\Masaüstü\DS 210 Graphs\3376428c-a7c7-44ad-89c2-842330f001d4.png" alt="Task Impact Visualization" class="graph">
+            <br>
+            <br>
+            <h>Click on graph for expanded view</h>
+        </div>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="section" style="background-color: rgba(6, 87, 94, 0.9);">
+        <div class="content">
+            <h1>If i could find the difference before visualizing, <br>the graph would look more expressive</h1><br>
+            <img src="C:\Users\utkuc\OneDrive\Masaüstü\DS 210 Graphs\4563cf85-1b05-4253-94be-7b7f6b5915c2.png" alt="Task Impact Visualization" class="graph">
+            <br>
+            <br>
+            <h>Click on graph for expanded view</h>
+        </div>
+    </div>
+    
+    <!-- Section 10 -->
+    <div class="section" style="background-color: rgba(60, 6, 33, 0.9);">
+        <div class="content">
+            <h1>Now lets do some tests, but before hypotheses</h1><br>
+            <p><u>Null Hypothesis (H0):</u> University assignments have no significant impact on daily activity levels.</p><br><br>
+            <p><u>Alternative Hypothesis (Ha):</u> University assignments significantly impact daily activity levels.</p><br>
+            <p>If p value is smaller than 0.05 we can reject the null hypothesis</p>
+
+            <img src="C:\Users\utkuc\OneDrive\Masaüstü\DSA210 Project\p-value.png" alt="Task Impact Visualization" class="graph">
+        </div>
+    </div>
+
+    <!-- Section 11 -->
+    <div class="section" style="background-color: rgba(60, 6, 33, 0.9);">
+        <div class="content">
+            <h1>Constructed KDE to see the probablity density regarding <br> normal and task day</h1><br>
+            <p>The KDE graph reveals that the average step count on normal days is significantly higher than on task days.</p>
+            <img src="C:\Users\utkuc\OneDrive\Masaüstü\DS 210 Graphs\50a65d09-5a13-41bc-9bb2-407c14ef01c5.png" alt="Task Impact Visualization" class="graph">
+            <br>
+            <br>
+            <h>Click on graph for expanded view</h>
+        </div>
+    </div>
+
+    <!-- Section 12 -->
+    <div class="section" style="background-color: rgba(0, 0, 0, 0.8);">
+        <div class="content">
+            <h1>Applied T-Test</h1><br>
+            <p>According to t-test the p-value is found to be apporixametly 0.0009643 and since this value is smaller than 0.05, <br> we can <u>reject the Null Hypothesis</u> <br><br> (Task steps include the previous 2 days from a task)</p>
+            <img src="C:\Users\utkuc\OneDrive\Masaüstü\DS 210 Graphs\Ekran görüntüsü 2025-01-08 145659.png" alt="Task Impact Visualization" class="graph">
+        </div>
+    </div>
+
+    <!-- Section 13 -->
+    <div class="section" style="background-color: rgba(0, 0, 0, 0.8);">
+        <div class="content">
+            <h1>Applied Mann-Whitney U Test</h1><br>
+            <p>According to Mann-Whitney U Test the p-value is found to be apporixametly 0.0004865 and since this value is smaller than 0.05, <br> we can <u>reject the Null Hypothesis</u> according to this test too<br><br> (Task steps include the previous 2 days from a task)</p>
+            <img src="C:\Users\utkuc\OneDrive\Masaüstü\DS 210 Graphs\Ekran görüntüsü 2025-01-08 151038.png" class="graph">
+        </div>
+    </div>
+
+    <!-- Section 14 -->
+    <div class="section" style="background-color: rgba(0, 0, 0, 0.8);">
+        <div class="content">
+            <h1>Applied Kruskal-Wallis Test</h1><br>
+            <p>According to Mann-Whitney U Test the p-value is found to be apporixametly 0.0004777 and since this value is smaller than 0.05, <br> we can <u>reject the Null Hypothesis</u> according to this test too<br><br> (Task steps include the previous 2 days from a task)</p>
+            <img src="C:\Users\utkuc\OneDrive\Masaüstü\DS 210 Graphs\Ekran görüntüsü 2025-01-08 151336.png" alt="Task Impact Visualization" class="graph">
+        </div>
+    </div>
+
+    <!-- Section 15 -->
+    <div class="section" style="background-color: rgba(66, 55, 8, 0.9);">
+        <div class="content">
+            <p>Since all the tests results in rejecting the Null Hypothesis we can say that:</p><br>
+            <h2>University assignments significantly impact <br> daily activity levels.</h2>
+            <img src="C:\Users\utkuc\OneDrive\Masaüstü\DS 210 Graphs\giphy.gif" alt="Task Impact Visualization" class="graph">
+        </div>
+    </div>
+
+    <!-- Section 16 -->
+    <div class="section" style="background-color: rgba(66, 55, 8, 0.9);">
+        <div class="content">
+            <p2>THANK YOU FOR YOUR TIME</p2><br>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal" id="imageModal">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <img id="modalImage" src="" alt="Enlarged Visualization">
     </div>
 
     <script>
-        // Highlight effect for active sections
-        const sections = document.querySelectorAll(".section");
+        // Modal functionality
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        const closeModal = document.getElementById("closeModal");
+        const graphs = document.querySelectorAll(".graph, .small-img");
 
-        window.addEventListener("scroll", () => {
-            let scrollPos = window.scrollY + window.innerHeight / 2;
-
-            sections.forEach(section => {
-                if (
-                    scrollPos > section.offsetTop &&
-                    scrollPos < section.offsetTop + section.offsetHeight
-                ) {
-                    section.classList.add("active");
-                } else {
-                    section.classList.remove("active");
-                }
+        graphs.forEach(graph => {
+            graph.addEventListener("click", () => {
+                modalImage.src = graph.src;
+                modal.classList.add("active");
             });
+        });
+
+        closeModal.addEventListener("click", () => {
+            modal.classList.remove("active");
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target !== modalImage) {
+                modal.classList.remove("active");
+            }
         });
     </script>
 </body>

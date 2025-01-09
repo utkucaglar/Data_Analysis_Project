@@ -1,20 +1,35 @@
-# My Step Count and University Assignments
+# **Analysis of My Step Count and University Assignments**
 
-## Introduction
+---
+
+# [**Explanatory Website**](https://utkucaglar.github.io/Data_Analysis_Project/)
+
+---
+
+## **Introduction**
 
 Sabanci University DSA210 Introduction to Data Science Course Fall 2023-2024 Term Project.
 This project will include the analysis of my step count and the University assignments' impact on my step count.
 
+---
 
-## Motivation 
+## **Hypotheses**
+
+- Null Hypothesis (H₀): There is no significant difference in daily activity levels between task days (including the two days prior) and normal days.
+- Alternative Hypothesis (Hₐ): There is a significant decrease in daily activity levels on task days (including the two days prior) compared to normal days.
+
+---
+
+## **Motivation** 
 
 My motivation for this project stems from the desire to:
 -   Understand Behavioral Patterns: Explore how academic deadlines influence your physical activity habits.
 -   Personal Health Insights: Gain insights into your overall physical well-being during periods of high academic stress.
 -   Data-Driven Decision Making: Use findings to adjust time management and activity levels to maintain balance during stressful academic periods.
 
+---
 
-### Tools and Libraries Used
+### **Tools and Libraries Used**
 
 **[Visual Studio Code](https://code.visualstudio.com/):**  Used as the primary Integrated Development Environment (IDE) for writing and managing the project code.
 
@@ -33,16 +48,20 @@ My motivation for this project stems from the desire to:
 - **Mann-Whitney U Test**: For comparing step distributions between task and normal days.
 - **Kruskal-Wallis Test**: To identify significant differences between step counts across multiple groups.
 
-## Data Sources
+---
+
+## **Data Sources**
 
 I had two main sources of data:
 
--   Data that i exported from my [Apple Health](https://apps.apple.com/us/app/apple-health/id1242545199) app with a request.
+-   Data that i exported from my [Apple Health](https://apps.apple.com/us/app/apple-health/id1242545199) app with a request. [(raw data)](raw_data_from_health_app.xml)
 -   Data that i exported from my [Zepp Life (Formerly MiFit)](https://apps.apple.com/tr/app/zepp-life-formerly-mifit/id938688461?l=tr) app which i
-wasn't able to use due to the corrupted data or great amount of [missing data](ZeppLife_data.csv).
+wasn't able to use due to the corrupted data or great amount of [missing data](ZeppLife_data.csv). (HAVEN'T USED)
 -   Information about the dates of assignments from sucourse (didn't use code).
 
-### Requested data
+---
+
+### **Requested data**
 
 Requested data is in .xml format and contains: (I only used step count since that was the most relevant one to my project)
 (I didn't use Active Energy Burned and Walking Distance, since those data would give similar visualizations to steps taken)
@@ -54,40 +73,65 @@ Requested data is in .xml format and contains: (I only used step count since tha
 -   **Daily Flights Climbed:** The distance walked vertically in a day.  
 -   **Daily Headphone Audio Exposure:** The volume of the sound given my headphones in a day.
 
-ssssssssssssssssssssss
-## Research Questions
-1. **Activity Patterns**:
-   - How do physical activity levels vary during periods of high academic stress, such as exams or homework-heavy weeks?
-   - Are there observable differences in activity between weekdays and weekends?
+---
 
-2. **External Influences**:
-   - What role do factors such as weather or travel days play in shaping physical activity trends?
+## **Data Analysis**
+For detailed and technical information see [main.ipynb](main.ipynb).
 
-3. **Device Comparison**:
-   - How consistent are the measurements between my smartwatch and phone app for steps, kilometers, and flights climbed, calories burned?
-   - Do discrepancies exist between the datasets, and what might explain them?
+1. At first i exported my data and uploaded them into a folder to work on it in [Visual Studio Code](https://code.visualstudio.com).
+2. Then i parsed my data and extracted the ones that i could use for my project.
+3. After that i created a dataframe to easliy use my data for visualizations and calculations.
+4. I tried to understand my dataset using various amount of visalizations.
+5. Experimenting, i noticed there is a relationship between the amount of steps i took a day and the date of an important University related assignment.
+6. I made more visualization with that information to further investigate.
+7. Then i made some hypothesis testing to see if i can reject the null hypothesis.
+8. It turned out my hypothesis was true.
 
-4. **Long-Term Trends**:
-   - What general trends emerge from daily, weekly, and monthly activity data?
+---
 
-## Dataset Description
-- **Smartwatch Data**: Includes daily records of steps taken, kilometers traveled, flights climbed, and calorie burn.
-- **Phone App Data**: Similar activity metrics captured using GPS and motion sensors.
-- Additional data, such as weather conditions or personal stress logs, may be incorporated to add context.
+## **Findings**
 
-## Project Aims
-1. **Identify Patterns**: Explore how physical activity changes during academic stress periods and other external influences.
-2. **Validate Data Sources**: Compare data from the smartwatch and phone app to assess accuracy and reliability.
-3. **Visualize Findings**: Create visualizations that clearly illustrate activity trends, relationships, and discrepancies between datasets.
-4. **Draw Insights and Recommendations**: Use findings to evaluate the effectiveness of wearable devices and their tracking methods.
+These are what i found out from this project:
+- I tend to take assignments serious when the deadline approaches. (as most of the students)
+- The midterm exam system in our univeristy punishes the students, who doesn't study daily by forcing them to study and take exams on weekends. (again most of the students)
+- I observed a partial recovery in my step count immediately after task days, likely due to the completion of academic responsibilities freeing up time for other activities.
 
-## Example Claims
-1. **Activity Impact of Exams**: Physical activity decreases significantly during exam weeks compared to normal routines, reflecting the influence of academic stress.
-2. **Device Discrepancies**: Initial comparisons suggest inconsistencies between smartwatch and phone app data, particularly in step counts.
+---
 
-## Project Plan
-1. **Data Collection and Cleaning**: Gather and prepare data from both sources for analysis.
-2. **Exploratory Analysis**: Investigate trends, patterns, and relationships in the data.
-3. **Comparison Analysis**: Evaluate discrepancies between smartwatch and phone app metrics.
-4. **Visualization**: Develop graphs and charts to support claims and highlight findings.
-5. **Report**: Compile insights, conclusions, and recommendations into a cohesive report.
+## **Limitations and Future Work**
+
+#### **Limitations**
+
+1. **Incomplete Data from Zepp Life App**:  
+   - Unfortunately, I was unable to use the data exported from my smartband app (Zepp Life) due to extensive missing data and corrupted files.  
+   - If I had access to a clean and complete dataset from Zepp Life, I could have compared it with my data from the Apple Health app. This would have allowed me to identify patterns across multiple data sources and validate findings more robustly.  
+   - The lack of comparison with another dataset limits the scope of the analysis and the depth of reflective insights I could provide.  
+
+2. **Limited Sample Size**:  
+   - Since my project uses personal data from a single individual (myself), the findings cannot be generalized to a larger population. The project reflects my unique habits and behavior but may not apply universally.
+
+---
+
+#### **Future Work**
+
+1. **Incorporating Additional Data Sources**:  
+   - Future iterations of this project could include data from multiple apps or devices to ensure a more comprehensive and comparative analysis. For instance, I could attempt to clean and recover the Zepp Life data or use another wearable device for further tracking.
+
+2. **Exploring Other Metrics**:  
+   - Incorporating other activity-related metrics such as heart rate variability, and sleep patterns could provide a more holistic view of the impact of assignments on health and well-being.
+
+3. **Expanding the Dataset**:  
+   - Collecting and analyzing data over a longer time period or collaborating with peers to include data from multiple individuals could provide more generalizable results and uncover broader trends.
+
+4. **Real-Time Tracking and Intervention**:  
+   - I could integrate real-time tracking to monitor activity levels during high-stress periods and design interventions such as reminders to take breaks or engage in light physical activity during study sessions.
+
+5. **Analyzing Productivity and Performance**:  
+   - Future work could involve correlating physical activity with academic performance metrics (e.g., grades) to examine how activity levels influence productivity and focus during task-heavy periods.
+
+6. **Integration with External Factors**:  
+   - Adding external data, such as weather or daylight hours, could help understand how environmental factors interact with academic schedules to influence physical activity levels.
+
+By addressing these limitations and exploring these future directions, my project could evolve into a more comprehensive and impactful analysis of how academic responsibilities affect health and behavior.
+
+

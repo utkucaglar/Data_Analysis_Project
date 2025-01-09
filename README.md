@@ -6,6 +6,29 @@
 
 ---
 
+## Table of Contents
+
+**[Introduction](#introduction)**  
+
+**[Hypotheses](#hypotheses)**  
+
+**[Motivation](#motivation)**  
+
+**[Tools and Libraries Used](#tools-and-libraries-used)**  
+
+**[Data Sources](#data-sources)**  
+* [Requested Data](#requested-data)
+
+**[Data Analysis](#data-analysis)**  
+
+**[Findings](#findings)**  
+
+**[Limitations and Future Work](#limitations-and-future-work)**  
+* [Limitations](#limitations)
+* [Future Work](#future-work)
+
+---
+
 ## **Introduction**
 
 Sabanci University DSA210 Introduction to Data Science Course Fall 2023-2024 Term Project.

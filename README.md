@@ -2,7 +2,7 @@
 
 ---
 
-# [**Explanatory Website**](https://utkucaglar.github.io/Data_Analysis_Project/)
+# [**Explanatory Website For The Project**](https://utkucaglar.github.io/Data_Analysis_Project/)
 
 ---
 

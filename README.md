@@ -61,7 +61,7 @@ wasn't able to use due to the corrupted data or great amount of [missing data](Z
 
 ---
 
-### **Requested data**
+## **Requested Data**
 
 Requested data is in .xml format and contains: (I only used step count since that was the most relevant one to my project)
 (I didn't use Active Energy Burned and Walking Distance, since those data would give similar visualizations to steps taken)

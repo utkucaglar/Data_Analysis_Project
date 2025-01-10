@@ -77,7 +77,7 @@ My motivation for this project stems from the desire to:
 
 I had two main sources of data:
 
--   Data that i exported from my [Apple Health](https://apps.apple.com/us/app/apple-health/id1242545199) app with a request. [(raw data)](raw_data_from_health_app.xml)
+-   Data that i exported from my [Apple Health](https://apps.apple.com/us/app/apple-health/id1242545199) app with a request. [(raw data)](raw_data_from_health_app.xml) I recieved the raw data thorugh gmail without struggle.
 -   Data that i exported from my [Zepp Life (Formerly MiFit)](https://apps.apple.com/tr/app/zepp-life-formerly-mifit/id938688461?l=tr) app which i
 wasn't able to use due to the corrupted data or great amount of [missing data](ZeppLife_data.csv). (NOT USED)
 -   Information about the dates of assignments from sucourse (didn't use code).

@@ -32,7 +32,7 @@
 ## **Introduction**
 
 Sabanci University DSA210 Introduction to Data Science Course Fall 2023-2024 Term Project.
-This project will include the analysis of my step count and the University assignments' impact on my step count.
+This project will include the analysis of my step count and the University assignments' impact on my step count. The data I analyzed spans from September 23 2024, to December 15 2024.
 
 ---
 

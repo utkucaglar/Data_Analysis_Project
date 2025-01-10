@@ -77,10 +77,10 @@ My motivation for this project stems from the desire to:
 
 I had two main sources of data:
 
--   Data that i exported from my [Apple Health](https://apps.apple.com/us/app/apple-health/id1242545199) app with a request. [(raw data)](raw_data_from_health_app.xml) I recieved the raw data thorugh gmail without struggle.
+-   Data that i exported from my [Apple Health](https://apps.apple.com/us/app/apple-health/id1242545199) app with a request. [(raw data)](raw_data_from_health_app.xml) I received the raw data through gmail without struggle.
 -   Data that i exported from my [Zepp Life (Formerly MiFit)](https://apps.apple.com/tr/app/zepp-life-formerly-mifit/id938688461?l=tr) app which i
 wasn't able to use due to the corrupted data or great amount of [missing data](ZeppLife_data.csv). (NOT USED)
--   Information about the dates of assignments from sucourse (didn't use code).
+-   Information about the dates of assignments from sucourse (no codes used).
 
 ---
 
@@ -103,9 +103,9 @@ For detailed and technical information see [main.ipynb](main.ipynb).
 
 1. At first i exported my data and uploaded them into a folder to work on it in [Visual Studio Code](https://code.visualstudio.com).
 2. Then i parsed my data and extracted the ones that i could use for my project.
-3. After that i created a dataframe to easliy use my data for visualizations and calculations.
-4. I tried to understand my dataset using various amount of visalizations.
-5. Experimenting, i noticed there is a relationship between the amount of steps i took a day and the date of an important University related assignment.
+3. After that i created a dataframe to easily utilize my data for visualizations and calculations.
+4. I tried to understand my dataset using a variety of visualizations.
+5. Experimenting, i noticed there is a relationship between the number of steps I took in a day and the date of an important University related assignment.
 6. I made more visualization with that information to further investigate.
 7. Then i made some hypothesis testing to see if i can reject the null hypothesis.
 8. It turned out my hypothesis was true.
@@ -116,7 +116,7 @@ For detailed and technical information see [main.ipynb](main.ipynb).
 
 These are what i found out from this project:
 - I tend to take assignments serious when the deadline approaches. (as most of the students)
-- The midterm exam system in our univeristy punishes the students, who doesn't study daily by forcing them to study and take exams on weekends. (again most of the students)
+- The midterm exam system in our university punishes students who do not study daily by forcing them to study and take exams on weekends. (again like most students)
 - I observed a partial recovery in my step count immediately after task days, likely due to the completion of academic responsibilities freeing up time for other activities.
 
 ---
